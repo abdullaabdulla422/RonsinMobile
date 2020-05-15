@@ -1,0 +1,159 @@
+<!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnr_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:ignore="Overdraw">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/txt_header"
+        android:layout_gravity="center"
+        android:background="@color/btn_blue"
+        android:gravity="center"
+        android:text="Select Profile"
+        android:textColor="@color/whitecolor"
+        android:textSize="19sp"
+        android:textStyle="bold|normal"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_weight="10"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:ignore="InefficientWeight">
+
+
+        <Button
+            android:id="@+id/txt_add_profile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@color/btn_blue"
+            android:gravity="center"
+            android:text="Add Profile"
+            android:textColor="@color/whitecolor"
+            android:textSize="19sp"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/lnr_list_table"
+            android:background="@color/btn_blue"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/txt_company_name"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Company Name"
+                android:textColor="@color/whitecolor"
+                android:textSize="19dp"
+                android:textStyle="bold"></TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/whitecolor">
+
+            </View>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:id="@+id/txt_company_code"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Company Code"
+                android:textColor="@color/whitecolor"
+                android:textSize="19dp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+
+        <!--        <ListView-->
+        <!--            android:id="@+id/listView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/box_background"-->
+        <!--            tools:ignore="InefficientWeight,NestedWeights"></ListView>-->
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/box_background"
+            android:divider="@color/btn_blue"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="true"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="500dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textSize="22dp"
+            android:text="LOGGER :"
+            android:layout_alignParentLeft="true"
+
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_sendmail"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_corner"
+            android:text="Send Email LOG"
+            android:padding="5dp"
+            android:textColor="@color/whitecolor"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@color/btn_blue"
+            android:text="Done"
+            android:textColor="@color/whitecolor"
+            android:textSize="19dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+</LinearLayout>

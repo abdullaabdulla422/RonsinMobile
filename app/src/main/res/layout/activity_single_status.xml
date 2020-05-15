@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rltotalbg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/btn_blue"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgbackpress"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+
+        <TextView
+            android:id="@+id/txt_backpress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Back"
+            android:textColor="@color/whitecolor"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="Status"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <CheckedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
+        android:background="@color/whitecolor"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="Test Status"
+        android:textColor="@color/blackcolor"
+        android:textSize="14dp"
+        android:visibility="gone"
+        tools:ignore="Overdraw,RtlHardcoded,SpUsage" />
+
+    <LinearLayout
+        android:id="@+id/workorder_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txt_workorder"
+            android:text="Work order : "
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_value"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workorder_header"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp">
+
+        <ListView
+            android:id="@+id/list_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </androidx.cardview.widget.CardView>
+
+
+        <EditText
+            android:id="@+id/edt_status"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/box_background"
+            android:hint="Type special status"
+            android:gravity="top"
+            android:layout_above="@id/lnr_send"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:maxLines="3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="13dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/lnr_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btn_send_status"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/button_corner"
+            android:text="Send Status"
+            android:textColor="@color/whitecolor"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+</RelativeLayout>

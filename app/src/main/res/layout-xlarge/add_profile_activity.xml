@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnr_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="10"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/btn_blue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Add Profile"
+            android:textColor="@color/whitecolor"
+            android:textSize="19sp"
+            android:textStyle="bold|normal"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        tools:ignore="InefficientWeight">
+
+
+        <RelativeLayout
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+
+            <EditText
+                android:id="@+id/edt_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/box_background"
+                android:inputType="text"
+                android:drawableLeft="@drawable/ic_location_city_black_24dp"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:hint="Company Name"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textSize="19dp" />
+
+
+            <EditText
+                android:id="@+id/edt_company_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_company_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/box_background"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_company_black_24dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Company Code"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="19dp" />
+
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_company_code"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/box_background"
+                android:layout_marginBottom="10dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+                android:hint="User ID"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="19dp" />
+
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_username"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/box_background"
+                android:drawablePadding="5dp"
+                android:hint="Password"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="19dp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="55dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/addProfile"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/button_corner"
+            android:text="Add"
+            android:textColor="@color/whitecolor"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/cancelProfile"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/button_corner"
+            android:text="Cancel"
+            android:textColor="@color/whitecolor"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            tools:ignore="ButtonOrder,ButtonStyle,HardcodedText,RtlHardcoded" />
+    </LinearLayout>
+
+</LinearLayout>
